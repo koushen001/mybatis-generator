@@ -28,6 +28,7 @@ public class GeneratorSqlmap {
 
 	public static void main(String[] args) throws Exception {
 		try {
+			//运行
 			GeneratorSqlmap generatorSqlmap = new GeneratorSqlmap();
 			generatorSqlmap.generator();
 		} catch (Exception e) {
