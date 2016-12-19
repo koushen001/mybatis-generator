@@ -6,8 +6,7 @@
 <generatorConfiguration>
 	<!-- 引入配置文件 -->
 	<properties resource="jdbc.properties" />
-	<context id="Mysql" targetRuntime="MyBatis3Simple"
-		defaultModelType="flat">
+	<context id="Mysql" targetRuntime="MyBatis3">
 		<!-- 注释 -->
 		<commentGenerator>
 			<property name="suppressAllComments" value="true" /><!-- 是否取消注释 -->
@@ -46,12 +45,10 @@
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
 		<!-- 指定数据库表 -->
-		<table schema="" tableName="user"></table>
-		<table schema="" tableName="role"></table>
-		<table schema="" tableName="permission"></table>
-		<table schema="" tableName="user_role"></table>
-		<table schema="" tableName="role_permission"></table>
-
+		<table schema="" tableName="user" domainObjectName="User"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
 		<!-- 有些表的字段需要指定java类型 <table schema="" tableName=""> <columnOverride column="" 
 			javaType="" /> </table> -->
 	</context>
